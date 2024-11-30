@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIZA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+    
+        /* Navigation styles */
+        nav {
+            background-color: #2c3e50;  /* تغيير اللون الخلفي إلى لون أغمق وأكثر أناقة */
+            padding: 20px 40px; /* زيادة padding لتحسين التباعد */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف لإعطاء مظهر عصري */
+        }
+        
+        nav h1 {
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+            letter-spacing: 2px; /* إضافة تباعد بين الأحرف لإضفاء مظهر عصري */
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            font-size: 18px;
+            margin: 0 25px;  /* تعديل المسافة بين الروابط */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;  /* إضافة تأثير انتقال سلس */
+        }
+        
+        .nav-links a:hover {
+            color: #ffd54f;  /* لون عند المرور فوق الرابط */
+            transform: translateY(-3px);  /* رفع الرابط قليلاً عند المرور فوقه لإضفاء حركة */
+        }
+        
+        .nav-links a:active {
+            color: #ff7043;  /* تغيير اللون عند الضغط على الرابط */
+            transform: translateY(1px);  /* إضافة حركة ضغط خفيفة */
+        }
+        
+        /* إضافة تأثيرات على القائمة إذا كانت القائمة منسدلة */
+        .nav-links a.dropdown:hover {
+            color: #ff7043;
+        }
+        
+    
+        /* Header styles */
+        .header {
+            font-size: 30px;
+            font-weight: bold;
+            color: #00796b;
+            text-align: center;
+            margin-top: 40px;
+        }
+    
+        /* Section styles */
+        .section {
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+    
+        .section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+    
+        .activities ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+    
+        .activities ul li {
+            font-size: 18px;
+            color: #333;
+        }
+    
+        /* Footer styles */
+        footer {
+            background-color: #00695c;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    
+        /* Card layout for images */
+        .card-deck {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    
+        .card-deck .card {
+            flex: 1;
+            max-width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+        }
+    
+        .card-deck .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #00796b;
+        }
+    
+        /* Hover effect for cards */
+        .card-deck .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Keyframe for fade-in effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+    
+            .card-deck {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>SAWA7</h1>
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="hotels.html">HOTELS</a>
+        </div>
+    </nav>
+
+    <!-- Section 1: The Great Pyramid of Giza -->
+    <div class="section">
+        <h2 class="header">1- The Great Pyramid of Giza</h2>
+        <p>
+            Also known as the Pyramid of Khufu, it is the oldest amongst the seven wonders of the world and largest amongst the three other Giza pyramids. Made up of granite and limestone, the pyramids of Giza are almost 4500 years old. Visit this place and discover the ancient Egypt. It is believed that this pyramid was built as a tomb for a king. Try visiting the pyramid in the morning as only a limited number of visitors are allowed here on a daily basis.
+        </p>
+        <div class="card-deck">
+            <div class="card">
+                <img src="Camel-Ride-in-Egypt.webp" alt="Camel Rides">
+                <div class="card-body">
+                    <h5 class="card-title">Camel Rides</h5>
+                    <p class="card-text">Ride camels around the pyramids and enjoy the ancient surroundings.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\phototake.webp" alt="Take Photos">
+                <div class="card-body">
+                    <h5 class="card-title">Take Photos</h5>
+                    <p class="card-text">Capture the iconic pyramid from various angles and preserve memories.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\buying.jpg" alt="Buying Historical Items">
+                <div class="card-body">
+                    <h5 class="card-title">Buying Historical Items</h5>
+                    <p class="card-text">Purchase souvenirs and historical items from local vendors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: The Grand Egyptian Museum -->
+    <div class="section">
+        <h2 class="header">2- The Grand Egyptian Museum</h2>
+        <p>
+            Also called the Giza Museum, it is a museum with artifacts of Ancient Egypt. There is construction going on in the museum so as to add more new artifacts here. The museum is also set to become a hub for communications between different museums around the world. This is one of the most amazing places to visit in Giza, Egypt.
+        </p>
+        <div class="card-deck">
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\202202100230273027.jpg" alt="Explore the Artifacts">
+                <div class="card-body">
+                    <h5 class="card-title">Explore the Artifacts</h5>
+                    <p class="card-text">Discover the treasures of Ancient Egypt inside the museum.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\ddee3963-e88a-43c8-809e-a048424607a6-17748-turin-egyptian-museum-of-turin-skip-the-line-group-tour-02.jpg" alt="Educational Tours">
+                <div class="card-body">
+                    <h5 class="card-title">Educational Tours</h5>
+                    <p class="card-text">Join guided tours to learn more about Egypt's ancient history.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\77258.jpg" alt="Take Photos">
+                <div class="card-body">
+                    <h5 class="card-title">Take Photos</h5>
+                    <p class="card-text">Don't forget to capture the moment at the Grand Egyptian Museum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Giza Solar Boat Museum -->
+    <div class="section">
+        <h2 class="header">3- Giza Solar Boat Museum</h2>
+        <p>
+            Constructed in the year 1985, the main aim behind constructing this museum was to display the Khufu Solar Ship which was reconstructed. This small museum in Giza is a remarkable and excellent archaeological site. Going back to history, the solar boats were basically large ships that were used in religious rituals. This museum is definitely worth a visit.
+        </p>
+        <div class="card-deck">
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\boat.webp" alt="Solar Boat Photos">
+                <div class="card-body">
+                    <h5 class="card-title">Take Photos</h5>
+                    <p class="card-text">Capture the unique Solar Boat on display inside the museum.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\Solar Boat.jpg" alt="Interactive Displays">
+                <div class="card-body">
+                    <h5 class="card-title">Interactive Displays</h5>
+                    <p class="card-text">Learn about the Solar Boat's history through interactive displays.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="c:\Users\EL-TAWHEED\Desktop\folders\sawa7\fatma project\solar-boat-museum-giza.jpeg" alt="Audio Guides">
+                <div class="card-body">
+                    <h5 class="card-title">Audio Guides</h5>
+                    <p class="card-text">Use audio guides to get a detailed explanation of the Solar Boat's significance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Giza. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
